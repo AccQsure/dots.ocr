@@ -20,7 +20,7 @@ def inference_with_vllm(
         model_name='model',
         ):
     
-    addr = f"http://{ip}:{port}/v1"
+    addr = f"https://{ip}:{port}/v1"
     client = OpenAI(api_key="{}".format(os.environ.get("API_KEY", "0")), base_url=addr)
     messages = []
     messages.append(
